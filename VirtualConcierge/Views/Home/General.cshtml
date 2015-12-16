@@ -1,4 +1,19 @@
-﻿@{
+﻿
+<br>
+@using (Html.BeginForm("About", "Home"))
+{
+    <button class="btn btn-default btn-lg left">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </button>
+}
+@using (Html.BeginForm("Pets", "Home"))
+{
+    <button class="btn btn-default btn-lg right">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+}
+
+@{
     ViewBag.Title = "General Information";
 }
 <h2 class="center">@ViewBag.Title</h2>
@@ -7,14 +22,31 @@
 <br>
 
 <h3 class="center"> Coming and Going  </h3>
- <p> The code to the front door will be the last 4 digits of the phone number listed on airbnb.com. 
-     
-     </p>
+ <h4 class="center"> The code to the front door will be the last 4 digits of the phone number listed on airbnb.com.</h4>
 
-<h3 class="center"> I have the Bed, where's the Breakfast </h3>
+<br>
+<h3 class="center"> I have the Bed, where's the Breakfast? </h3>
+<h4 class="center"> There are minimal snacks and drinks in the rooms for your snacking needs. Breakfast is [usually] provided consisting
+     of fresh fruit and granola bars. If Mary just happens to be cooking a hot breakfast the morning of your stay, she will always provide
+     enough for for you. You are welcomg to grab some bacon and eggs if you smell it. Otherwise, the kitchen is free for full usage or visit
+     the "Around Town" tab for resturants nearby.  </h4>
 
+
+<br>
 <h3 class="center"> Entertainment  </h3>
+<h4 class="center"> First, please understand that we do not have cable. We rely on Netflix, Youtube, Amazon and Bluerays. The tv and most of
+     these apps are controlled by the Wii U. There are also Nintendo games available on the Wii U. Extra Wii controllers are in a drawer under the TV 
+     To watch a movie, just simply find yourself a blueray located in the drawers under the TV and put it in the player. It is controlled by the 
+    silver remote.  </h4>
 
+
+<br>
 <h3 class="center"> Dirty Laundry </h3>
+<h4 class="center"> You are welcome to use the Laundry Facilities if needed during your stay. Please try to let one or both of us know ahead of time as
+     there may be items in one or both washer and dryer.  </h4>
 
+
+<br>
 <h3 class="center"> Hot Tub Time </h3>
+<h4 class="center"> The hot tub is available and always ready for use. We typically keep the hottub at 99 degrees, which is not as hot as most prefer.
+    We enjoy to be able to soak longer without getting overheated. If you are interested in the hot tub being warmer, please let one of us know.   </h4>

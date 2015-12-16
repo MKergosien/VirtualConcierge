@@ -21,14 +21,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("General Info", "General", "Home")</li>
-                    
+                    @*<li>@Html.ActionLink("General Info", "General", "Home")</li>
                     <li>@Html.ActionLink("Pets", "Pets", "Home")</li>
                     <li>@Html.ActionLink("Restruants", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Guest Book", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Guest Book", "Contact", "Home")</li>*@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
                 </ul>
                     @Html.Partial("_LoginPartial")
@@ -37,9 +35,13 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <br>
+        <br>
+        <br>
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="center footer">WIFI: UNO | PASSWORD: 6154149739
+            <br>
+            &copy; @DateTime.Now.Year - KERGOSIEN.NET </div>
         </footer>
     </div>
 

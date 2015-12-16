@@ -1,26 +1,39 @@
-﻿@{
-    ViewBag.Title = "Our Furry 4 Legged Friends";
+﻿
+<br>
+@using (Html.BeginForm("General", "Home"))
+{
+    <button class="btn btn-default btn-lg left">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </button>
+}
+@using (Html.BeginForm("Town", "Home"))
+{
+    <button class="btn btn-default btn-lg right">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+}
+
+@{
+    ViewBag.Title = "Meet Our Furry Family";
 }
 <h2 class="center">@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
 <div class="row">
     <div class="col-md-4">
-        <h2 class="center">Lilly</h2class>
-        <p>
-            
-        </p>
+        <h2 class="center">Lilly</h2>
+        <div class="pic1 center"></div>
+        <h4 class="center">Lilly is our sweet girl. She loves anyone who is willing to give her a good butt scratch. She also LOVES to lick.  </h4>
     </div>
     <div class="col-md-4">
         <h2 class="center">Ritz</h2>
-        <p>
-
-        </p>
+        <div class="pic2 center"></div>
+        <h4 class="center">Ritz is is our protective girl. You will more than likely seen her in a muzzle as she is known to nip when startled. 
+         Ritz was abused and abandoned as a puppy and has trust issues with men. </h4>
     </div>
     <div class="col-md-4">
         <h2 class="center">Buffy</h2>
-       <p>
-
-        </p>
+       <div class="center pic3"></div>
+        <h4 class="center">Buffy is an indoor/outdoor kitty and stays mostly hidden. She does not care for being picked up but does love attention.</h4>
     </div>
 </div>

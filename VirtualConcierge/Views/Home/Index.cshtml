@@ -2,27 +2,42 @@
     ViewBag.Title = "Home Page";
 }
 
+<br>
 <div class="jumbotron">
-    <h1>Welcome!</h1>
+    <h1>Welcome to the Cozy Room!</h1>
 </div>
 
+<br>
+
 <div class="row">
-    <div class="col-md-4 center">
-        <h2>Wifi Info</h2>
-        <p>
-            Name: UNO  
-            <br>
-            Password: 6154149739
-        </p>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        @using (Html.BeginForm("About", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn1">About Us</button>
+        }
+        @using (Html.BeginForm("Town", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn4">Around Town</button>
+        }
     </div>
-    <div class="col-md-4 center">
-        <h2>Thermostat</h2>
-        <p>Feeling too warm or cool?</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Adjust here &raquo;</a></p>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        @using (Html.BeginForm("General", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn2">General Info</button>
+        }
+        @using (Html.BeginForm("Games", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn5">Our Games</button>
+        }
     </div>
-    <div class="col-md-4 center">
-        <h2>What do I do now?</h2>
-        <p>New to Franklin? Be sure to check out our favorte places around town! </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        @using (Html.BeginForm("Pets", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn3">Our Pets</button>
+        }
+        @using (Html.BeginForm("Guestbook", "Home"))
+        {
+            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn6">Guestbook</button>
+        }
     </div>
 </div>

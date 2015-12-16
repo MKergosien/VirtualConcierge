@@ -38,5 +38,23 @@ namespace VirtualConcierge.Controllers
             return View();
         }
 
+        public ActionResult Town()
+        {
+
+            return View();
+        }
+
+        public ActionResult Games()
+        {
+
+            return View();
+        }
+
+        public ActionResult Guestbook()
+        {
+
+            return View();
+        }
+
     }
 }

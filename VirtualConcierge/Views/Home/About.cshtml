@@ -1,12 +1,77 @@
-﻿@{
+﻿
+<br>
+@using (Html.BeginForm("Index", "Home"))
+{
+<button class="btn btn-default btn-lg left">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+</button>
+}
+@using (Html.BeginForm("General", "Home"))
+{
+<button class="btn btn-default btn-lg right">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+</button>
+}
+@{
     ViewBag.Title = "About Gaines and Mary";
 }
 <h2 class="center">@ViewBag.Title</h2>
 
-<p>He's an IT geek who serves as a volunteer firefighter. 
-    She's a Registered Nurse who's attending school for medical IT. 
+<h4> He's an IT geek who serves as a volunteer firefighter. She's a Registered Nurse specializing in Healthcare IT. They met on the online dating site,
+    Okcupid, and were married in April of 2015. They both love kayaking, camping, traveling, and enjoy having friends over for board game nights.
     
-    We both love kayaking, camping, traveling, and enjoy having friends over for board game nights.
+    <br>
 
+"To laugh often and love much... to appreciate beauty, to find the best in others, to give one's self... this is to have succeeded." - Ralph Waldo Emerson</h4>
 
-"To laugh often and love much... to appreciate beauty, to find the best in others, to give one's self... this is to have succeeded." - Ralph Waldo Emerson</p>
+<br>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Thumbnail Gallery</h1>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive couple1" src="/Content/Images/xena.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive couple2" src="/Content/Images/squid.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="/Content/Images/steampunk.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="/Content/Images/cheers.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="/Content/Images/kiss.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#">
+                <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+            </a>
+        </div>
+    </div>

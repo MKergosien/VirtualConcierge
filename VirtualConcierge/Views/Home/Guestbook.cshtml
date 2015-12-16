@@ -1,0 +1,19 @@
+﻿
+<br>
+@using (Html.BeginForm("Games", "Home"))
+{
+    <button class="btn btn-default btn-lg left">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </button>
+}
+@using (Html.BeginForm("Index", "Home"))
+{
+    <button class="btn btn-default btn-lg right">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </button>
+}
+
+@{
+    ViewBag.Title = "Guestbook";
+}
+<h2 class="center">@ViewBag.Title</h2>
