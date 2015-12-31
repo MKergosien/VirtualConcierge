@@ -64,6 +64,17 @@ float: right;
 font-size: 18px;
 }
 
+.row-height {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.col-bottom {
+  vertical-align: bottom;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     color: #ffffff;
     background-color: #708090;
@@ -186,11 +197,13 @@ display: block;
    display: block;
    margin-left: auto;
    margin-right: auto;
+   border-radius: 100%;
 }
 
 .couple1 {
     width:400px;
    height:400px;
+   background-image: url(/Content/Images/xena.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 50% 50%;
@@ -237,3 +250,4 @@ display: block;
    display: block;
    float: left;
 }
+
