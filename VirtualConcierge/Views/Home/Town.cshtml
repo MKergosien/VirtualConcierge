@@ -1,4 +1,5 @@
-﻿
+﻿@model YelpSharp.Data.SearchResults
+
 <br>
 @using (Html.BeginForm("Pets", "Home"))
 {
@@ -17,3 +18,27 @@
     ViewBag.Title = "Whats Around Town?";
 }
 <h2 class="center">@ViewBag.Title</h2>
+
+@if (Model.error != null)
+{
+    <p>Error! @Model.error.text</p>
+}
+else
+{
+    foreach (var business in Model.businesses)
+    {
+        <div class=" backgrounddiv">
+           <div>
+            <img src=" @business.image_url">
+           <img class="center" src=" @business.rating_img_url_small">
+           </div>
+
+            <div>
+            <h3 class="center">@business.name</h3>
+            <h3 class="center">@((business.distance / 1609.34).ToString("#,##0.0")) miles away.</h3>
+            <h3 class="center">@business.display_phone</h3>
+            </div>
+            
+        </div>
+    }
+}

@@ -4,6 +4,7 @@
     background-image: url(/Content/Images/TiOL8as.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
+    background-attachment: fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -64,11 +65,36 @@ float: right;
 font-size: 18px;
 }
 
+div.backgrounddiv {
+  background-color: aliceblue;
+  border: 1px solid darkgrey;
+  margin: 30px;
+  padding: 10px 10px 10px 10px;
+  background: rgba(180, 227, 200, 0.4);
+}
+
+div.backgrounddiv p {
+    margin: 5%;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
 .row-height {
   display: table;
   table-layout: fixed;
   height: 100%;
   width: 100%;
+}
+
+.row {
+    display: table;
+}
+
+.row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .col-bottom {
