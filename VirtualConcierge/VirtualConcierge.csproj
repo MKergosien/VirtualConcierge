@@ -193,20 +193,30 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\squid.jpg" />
-    <Content Include="Content\Images\xena.jpg" />
-    <Content Include="Content\Images\cheers.jpg" />
-    <Content Include="Content\Images\kiss.jpg" />
-    <Content Include="Content\Images\steampunk.jpg" />
+    <Content Include="Content\batgirl.jpg" />
+    <Content Include="Content\bourbon.jpg" />
+    <Content Include="Content\catan.jpg" />
+    <Content Include="Content\cheers.jpg" />
+    <Content Include="Content\courthouse.jpg" />
     <Content Include="Content\Images\mary.jpg" />
     <Content Include="Content\Images\gaines.jpg" />
     <Content Include="Content\Images\ritz.jpg" />
     <Content Include="Content\Images\lilly.jpg" />
     <Content Include="Content\Images\buffy.jpg" />
-    <Content Include="Content\Images\sleepingpups.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\TiOL8as.png" />
+    <Content Include="Content\jjwedding.jpg" />
+    <Content Include="Content\kayak.jpg" />
+    <Content Include="Content\kiss.jpg" />
+    <Content Include="Content\murdermystery.jpg" />
+    <Content Include="Content\proposal.jpg" />
+    <Content Include="Content\shades.jpg" />
+    <Content Include="Content\steam.jpg" />
+    <Content Include="Content\steampunk.jpg" />
+    <Content Include="Content\steeplechase.jpg" />
+    <Content Include="Content\zena.jpg" />
+    <Content Include="Content\zoo.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

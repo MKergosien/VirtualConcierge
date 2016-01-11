@@ -51,6 +51,7 @@ float: left;
 .right {
 float: right;
 }
+
 .jumbotron {
 background-color: teal;
 margin-top: 15px;
@@ -87,16 +88,6 @@ div.backgrounddiv p {
   width: 100%;
 }
 
-.row {
-    display: table;
-}
-
-.row [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
-
 .col-bottom {
   vertical-align: bottom;
 }
@@ -106,59 +97,36 @@ div.backgrounddiv p {
     background-color: #708090;
 }
 
-.btn1 {
+.btn {
 padding: 30px;
 margin-top: 20px;
 color: black;
-background-color: #A0A68A;
 border: none;
 font-size: 25px;
+}
 
+.btn1 {
+background-color: #A0A68A;
 }
 
 .btn2 {
-padding: 30px;
-margin-top: 20px;
-color: black;
 background-color: #9AE8D0;
-border: none;
-font-size: 25px;
 }
 
 .btn3 {
-padding: 30px;
-margin-top: 20px;
-color: black;
 background-color: #C8F8FF;
-border: none;
-font-size: 25px;
 }
 
 .btn4 {
-padding: 30px;
-margin-top: 20px;
-color: black;
 background-color: #A8FFBE;
-border: none;
-font-size: 25px;
 }
 
 .btn5 {
-padding: 30px;
-margin-top: 20px;
-color: black;
 background-color: #DCFFD1;
-border: none;
-font-size: 25px;
 }
 
 .btn6 {
-padding: 30px;
-margin-top: 20px;
-color: black;
 background-color: #9AC5C8;
-border: none;
-font-size: 25px;
 }
 
 .pic1 {

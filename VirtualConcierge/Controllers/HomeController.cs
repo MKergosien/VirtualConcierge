@@ -85,20 +85,28 @@ namespace VirtualConcierge.Controllers
            
         public ActionResult Guestbook()
         {
+            List<Review> result = new List<Review>();
             using (var ctx = new ReviewContext())
             {
-                Review review = new Review() {
-                    FirstName = "New firstName",
-                    LastName = "New lastName",
-                    Location = "New Location",
-                    Date = DateTime.Now,
-                    Note = "New Note"
-    };
-
-                ctx.Reviews.Add(review);
-                ctx.SaveChanges();
+                result = ctx.Reviews.OrderByDescending(x => x.Date).ToList();
             }
-            return View();
+            return View(result);
+        }
+
+        [HttpPost]
+        public ActionResult Guestbook(Review newReview)
+        {
+            List<Review> result = new List<Review>();
+            using (var ctx = new ReviewContext())
+            {
+                newReview.Date = DateTime.Now;
+
+                ctx.Reviews.Add(newReview);
+                ctx.SaveChanges();
+
+                result = ctx.Reviews.OrderByDescending(x => x.Date).ToList();
+            }
+            return View(result);
         }
 
     }

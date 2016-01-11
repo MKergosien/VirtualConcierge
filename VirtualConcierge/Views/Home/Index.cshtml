@@ -11,33 +11,18 @@
 
 <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-4">
-        @using (Html.BeginForm("About", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn1">About Us</button>
-        }
-        @using (Html.BeginForm("Town", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn4">Around Town</button>
-        }
+        @Html.ActionLink("About Us", "About", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn1" })
+
+        @Html.ActionLink("Around Town", "Town", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn4" })
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4">
-        @using (Html.BeginForm("General", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn2">General Info</button>
-        }
-        @using (Html.BeginForm("Games", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn5">Our Games</button>
-        }
+        @Html.ActionLink("General Info", "General", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn2" })
+
+        @Html.ActionLink("Games", "Games", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn5" })
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4">
-        @using (Html.BeginForm("Pets", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn3">Our Pets</button>
-        }
-        @using (Html.BeginForm("Guestbook", "Home"))
-        {
-            <button class="btn-primary col-lg-12 col-md-12 col-sm-12 btn6">Guestbook</button>
-        }
+        @Html.ActionLink("Pets", "Pets", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn3"})
+   
+        @Html.ActionLink("Guestbook", "Guestbook", null, new { @class = "btn btn-primary col-lg-12 col-md-12 col-sm-12 btn btn6"})
     </div>
 </div>
