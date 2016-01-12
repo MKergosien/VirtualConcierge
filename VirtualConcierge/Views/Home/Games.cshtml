@@ -26,7 +26,7 @@
             @foreach (var item in Model.Items)
             {
                 <div class="col-lg-3 col-md-3 col-sm-3">
-                    <h5><b>@item.Name</b></h5>
+                    <h5><b>@item.Name.Substring(0, Math.Min(25, item.Name.Length))</b></h5>
 
                     <img src="@item.Thumbnail" data-holder-rendered="true" style=" height: 180px; width: 180px; display: block;" class="center col-bottom">
                     <br>

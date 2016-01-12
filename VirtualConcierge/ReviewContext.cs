@@ -9,7 +9,7 @@ namespace VirtualConcierge
 {
     public class ReviewContext : DbContext
     {
-        public ReviewContext() : base()
+        public ReviewContext() : base("DefaultConnection")
         {
 
         }
