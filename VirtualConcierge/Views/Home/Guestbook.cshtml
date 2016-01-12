@@ -38,16 +38,21 @@
             }
     </div>
     <div class="col-md-2">
+
             @using (Html.BeginForm("Guestbook", "Home"))
         {
             <form method="post">
                 <div class="center">
                     <h3> Leave A Review </h3>
                     <br>
-                    <b>First Name:</b> <br>@Html.TextBox("FirstName")<br />
-                    <b>Last Name: </b><br> @Html.TextBox("LastName")<br />
-                    <b> Hometown:</b><br> @Html.TextBox("Location")<br />
-                    <b>Review:</b> <br> @Html.TextArea("Note", null, new { rows = "10" })<br />
+                    <b>First Name:</b> <br>@Html.TextBox("FirstName")
+                    @Html.ValidationMessage("FirstName", new { @style = "color:red;!important" })<br />
+                    <b>Last Name: </b><br> @Html.TextBox("LastName")
+                    @Html.ValidationMessage("LastName", new { @style = "color:red;!important" })<br />
+                    <b> Hometown:</b><br> @Html.TextBox("Location")
+                    @Html.ValidationMessage("Location", new { @style = "color:red;!important" })<br />
+                    <b>Review:</b> <br> @Html.TextArea("Note", null, new { rows = "10" })
+                    @Html.ValidationMessage("Note", new { @style = "color:red;!important" })<br />
                     <br>
                     <input type="Submit" />
                 </div>

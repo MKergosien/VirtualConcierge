@@ -25,7 +25,7 @@ namespace VirtualConcierge.Controllers
 
         public ActionResult Contact()
         {
-           // ViewBag.Message = "Your contact page.";
+            // ViewBag.Message = "Your contact page.";
 
             return View();
         }
@@ -44,7 +44,8 @@ namespace VirtualConcierge.Controllers
 
         public async Task<ActionResult> Town(string searchTerm)
         {
-            if (searchTerm == null) {
+            if (searchTerm == null)
+            {
                 searchTerm = string.Empty;
             }
             YelpSharp.Options options = new YelpSharp.Options();
@@ -79,10 +80,10 @@ namespace VirtualConcierge.Controllers
             request.Own = true;
             request.ExcludeSubType = BGGAPI.Collection.Request.Type.BoardGameExpansion;
             var result = client.GetCollection(request);
-            
+
             return View(result);
         }
-           
+
         public ActionResult Guestbook()
         {
             List<Review> result = new List<Review>();
@@ -96,16 +97,29 @@ namespace VirtualConcierge.Controllers
         [HttpPost]
         public ActionResult Guestbook(Review newReview)
         {
+            if (string.IsNullOrEmpty(newReview.FirstName))
+                ModelState.AddModelError("FirstName", "First name is required.");
+            if (string.IsNullOrEmpty(newReview.LastName))
+                ModelState.AddModelError("LastName", "Last name is required.");
+            if (string.IsNullOrEmpty(newReview.Location))
+                ModelState.AddModelError("Location", "Hometown is required.");
+            if (string.IsNullOrEmpty(newReview.Note))
+                ModelState.AddModelError("Note", "A review is required.");
+
             List<Review> result = new List<Review>();
             using (var ctx = new ReviewContext())
             {
-                newReview.Date = DateTime.Now;
+                if (ModelState.IsValid)
+                {
+                    newReview.Date = DateTime.Now;
 
-                ctx.Reviews.Add(newReview);
-                ctx.SaveChanges();
-
+                    ctx.Reviews.Add(newReview);
+                    if (ctx.SaveChanges() > 0)
+                        ModelState.Clear();
+                }
                 result = ctx.Reviews.OrderByDescending(x => x.Date).ToList();
             }
+
             return View(result);
         }
 
