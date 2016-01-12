@@ -15,10 +15,12 @@
 }
 
 @{
-    ViewBag.Title = "Whats Around Town?";
+    ViewBag.Title = "Restaurants Around Town";
 }
 <h2 class="center">@ViewBag.Title</h2>
 
+<br>
+<br>
 @if (Model.error != null)
 {
     <p>Error! @Model.error.text</p>
@@ -27,18 +29,13 @@ else
 {
     foreach (var business in Model.businesses)
     {
-        <div class=" backgrounddiv">
-           <div>
+        <div class="center backgrounddiv">
             <img src=" @business.image_url">
-           <img class="center" src=" @business.rating_img_url_small">
-           </div>
-
-            <div>
+            <br>
+            <img class="center" src=" @business.rating_img_url_small">
             <h3 class="center">@business.name</h3>
             <h3 class="center">@((business.distance / 1609.34).ToString("#,##0.0")) miles away.</h3>
             <h3 class="center">@business.display_phone</h3>
-            </div>
-            
         </div>
     }
 }

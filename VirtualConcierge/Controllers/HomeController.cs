@@ -59,8 +59,9 @@ namespace VirtualConcierge.Controllers
 
             YelpSharp.Data.Options.GeneralOptions generalOptions = new YelpSharp.Data.Options.GeneralOptions();
             generalOptions.term = searchTerm;
-            generalOptions.limit = 10; //TODO: Change limit later or add offset(paing) 
+            generalOptions.limit = 20; //TODO: Change limit later or add offset(paing) 
             generalOptions.sort = 1; //TODO: look at other sort options later
+            generalOptions.category_filter = "food,restaurants";
             searchOptions.GeneralOptions = generalOptions;
 
             YelpSharp.Data.Options.LocationOptions locationOptions = new YelpSharp.Data.Options.LocationOptions();
