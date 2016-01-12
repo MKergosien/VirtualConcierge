@@ -9,12 +9,12 @@ I decided to create a personal kiosk app that would work on a tablet for each gu
 
 This Virtual Concierge provides all the information a guest needs to know for their stay. 
 It includes:
--Information about us, the house, and our pets. 
--A "Around Town" section that integrates the YELP API 
--A "Games" section that lists all the board games we own via the Board Game Geek API
--A "Guestbook" that saves reviews to a database. 
+*Information about us, the house, and our pets. 
+*A "Around Town" section that integrates the YELP API 
+*A "Games" section that lists all the board games we own via the Board Game Geek API
+*A "Guestbook" that saves reviews to a database. 
 
 
 Things that I would love to implement in V2.0 includes:
--A deeper dive into the Yelp API for better searching. 
--Make the board games clickable - provide general info about the game and instructions on how tp play. 
+*A deeper dive into the Yelp API for better searching. 
+*Make the board games clickable - provide general info about the game and instructions on how tp play. 
